@@ -9,10 +9,24 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [
+    react(), 
+    mode === "development" && componentTagger()
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "/", // Ensures correct asset paths on Netlify
+  build: {
+    outDir: "dist", // Netlify looks for this directory
+    sourcemap: false, // Disable for faster builds (optional)
+    rollupOptions: {
+      output: {
+        manualChunks: undefined, // Prevents chunk errors
+      },
+    },
+  },
 }));
+
