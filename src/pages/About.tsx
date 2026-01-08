@@ -42,7 +42,7 @@ export default function About() {
 
       <HeroSection
         title="About Us"
-        subtitle="Family-owned and operated since 2008. Proudly serving Canadian drivers."
+        subtitle="Fast-Track Auto Care delivers fast, honest, and reliable tire and auto services, keeping you safe, confident, and moving forward every mile."
         showCTA={false}
       />
 
