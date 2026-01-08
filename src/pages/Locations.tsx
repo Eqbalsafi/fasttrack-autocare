@@ -45,10 +45,10 @@ export default function Locations() {
                     <div>
                       <p className="font-medium text-foreground">Phone</p>
                       <a
-                        href="tel:6406400097"
+                        href="tel:+16476400097"
                         className="text-muted-foreground transition-colors hover:text-primary"
                       >
-                        640-640-0097
+                        (+1) 647-640-0097
                       </a>
                     </div>
                   </li>
@@ -133,10 +133,10 @@ export default function Locations() {
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               <Phone className="h-5 w-5" />
-              640-640-0097
+              (+1) 647-640-0097
             </a>
             <a
-              href="https://wa.me/6406400097"
+              href="https://wa.me/+16476400097"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-primary/50 px-6 py-3 font-medium text-foreground transition-colors hover:bg-primary/10"

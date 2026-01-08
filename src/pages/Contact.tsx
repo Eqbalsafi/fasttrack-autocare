@@ -9,8 +9,8 @@ const contactMethods = [
     icon: Phone,
     title: "Customer Service",
     description: "Main line for inquiries",
-    action: "+1640-640-0097",
-    href: "tel:+16406400097",
+    action: "+1647-640-0097",
+    href: "tel:+16476400097",
     primary: true,
   },
   {
@@ -18,7 +18,7 @@ const contactMethods = [
     title: "WhatsApp",
     description: "Message us anytime",
     action: "Chat Now",
-    href: "https://wa.me/+16406400097",
+    href: "https://wa.me/+16476400097",
     primary: false,
   },
   {

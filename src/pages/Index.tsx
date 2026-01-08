@@ -238,9 +238,9 @@ export default function Index() {
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" variant="secondary" className="gap-2 px-8 text-lg">
-              <a href="tel:+16406400097">
+              <a href="tel:+16476400097">
                 <Phone className="h-5 w-5" />
-                (+1) 640-640-0097
+                (+1) 647-640-0097
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="gap-2 border-primary-foreground/30 px-8 text-lg text-primary-foreground hover:bg-primary-foreground/10">
