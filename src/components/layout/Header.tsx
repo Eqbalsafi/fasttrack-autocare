@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,6 +16,11 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Auto-close menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container custom-container mx-auto px-4">
@@ -28,7 +33,6 @@ export function Header() {
               className="h-12 w-auto sm:h-12 md:h-20 lg:h-23" 
             />
           </Link>
-
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-1 lg:flex">
