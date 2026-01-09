@@ -82,7 +82,7 @@ export default function Locations() {
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <a
-                    href="tel:6406400097"
+                    href="tel:+6476400097"
                     className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                   >
                     <Phone className="h-5 w-5" />
@@ -129,7 +129,7 @@ export default function Locations() {
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="tel:6406400097"
+              href="tel:+6476400097"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               <Phone className="h-5 w-5" />
