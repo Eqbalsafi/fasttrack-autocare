@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { Phone, MessageCircle, Clock, Award, Users, Wrench, Droplets, CircleDot, Settings, Zap, DollarSign, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CallButton, WhatsAppButton } from "@/components/ContactButtons";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ServiceCard } from "@/components/cards/ServiceCard";
 import { FeatureItem } from "@/components/ui/FeatureItem";
 import TireSlideshow from "@/components/slideshow/Slideshow";
-
-// Import images for featured products
 
 // Import service images
 import tiresImage from "@/assets/services/new_old_tyre.jpg";
@@ -116,29 +115,22 @@ export default function Index() {
             </p>
 
             <div className="animate-fade-in flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" className="gap-2 bg-primary px-8 text-lg hover:bg-primary/90 text-white border-white/20">
-                <a href="tel:+16476400097">
-                  <Phone className="h-5 w-5" />
-                  Call Now
-                </a>
-              </Button>
-              <Button
-                asChild
+              <CallButton size="lg" className="gap-2 bg-primary px-8 text-lg hover:bg-primary/90 text-white border-white/20">
+                <Phone className="h-5 w-5" />
+                Call Now
+              </CallButton>
+              <WhatsAppButton
                 size="lg"
                 variant="outline"
                 className="gap-2 border-white/50 px-8 text-lg text-white hover:bg-white/10 backdrop-blur-sm"
               >
-                <a href="https://wa.me/+16476400097" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-5 w-5" />
-                  WhatsApp Us
-                </a>
-              </Button>
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp Us
+              </WhatsAppButton>
             </div>
           </div>
         </div>
       </section>
-
-     
 
       {/* Services Section */}
       <section className="bg-background py-20">
@@ -237,12 +229,10 @@ export default function Index() {
             Contact us today for a free quote or to schedule your service appointment.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" variant="secondary" className="gap-2 px-8 text-lg">
-              <a href="tel:+16476400097">
-                <Phone className="h-5 w-5" />
-                (+1) 647-640-0097
-              </a>
-            </Button>
+            <CallButton size="lg" variant="secondary" className="gap-2 px-8 text-lg">
+              <Phone className="h-5 w-5" />
+              (+1) 647-640-0097
+            </CallButton>
             <Button asChild size="lg" variant="outline" className="gap-2 border-primary-foreground/30 px-8 text-lg text-primary-foreground hover:bg-primary-foreground/10">
               <Link to="/contact">Contact Us</Link>
             </Button>

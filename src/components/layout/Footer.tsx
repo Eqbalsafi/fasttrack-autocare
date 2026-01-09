@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Clock, Mail, Facebook, Instagram } from "lucide-react";
+import { PhoneLink, EmailLink } from "@/components/ContactButtons";
 import logo from "@/assets/favicon-image.png";
 
 const quickLinks = [
@@ -20,13 +21,16 @@ const services = [
 ];
 
 export function Footer() {
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="border-t border-border bg-card">
       <div className="container mx-auto px-4 py-12">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* Brand */}
           <div className="space-y-4">
-            <Link to="/" className="inline-block">
+            <Link to="/" onClick={handleLinkClick} className="inline-block">
               <img src={logo} alt="Fast Track Tire & Lube" className="h-16 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground">
@@ -50,7 +54,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="mb-4 text-lg font-bold text-foreground">Quick Links</h3>
             <ul className="space-y-2">
@@ -58,6 +61,7 @@ export function Footer() {
                 <li key={link.path}>
                   <Link
                     to={link.path}
+                    onClick={handleLinkClick}
                     className="text-sm text-muted-foreground transition-colors hover:text-primary"
                   >
                     {link.name}
@@ -67,7 +71,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="mb-4 text-lg font-bold text-foreground">Our Services</h3>
             <ul className="space-y-2">
@@ -79,7 +82,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h3 className="mb-4 text-lg font-bold text-foreground">Contact Us</h3>
             <ul className="space-y-4">
@@ -87,18 +89,21 @@ export function Footer() {
                 <Phone className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <div>
                   <p className="text-sm font-medium text-foreground">Call Us</p>
-                  <a href="tel:+16476400097" className="text-sm text-muted-foreground hover:text-primary">
-                    (+1) 647-640-0097
-                  </a>
+                  <PhoneLink 
+                    className="text-sm text-muted-foreground hover:text-primary" 
+                    showIcon={false}
+                    showFullNumber={true}
+                  />
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <div>
                   <p className="text-sm font-medium text-foreground">Email</p>
-                  <a href="mailto:fasttracktire@yahoo.com" className="text-sm text-muted-foreground hover:text-primary">
-                    fasttracktire@yahoo.com
-                  </a>
+                  <EmailLink 
+                    className="text-sm text-muted-foreground hover:text-primary" 
+                    showIcon={false}
+                  />
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -119,7 +124,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-12 border-t border-border pt-6">
           <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row">
             <p className="text-sm text-muted-foreground">
