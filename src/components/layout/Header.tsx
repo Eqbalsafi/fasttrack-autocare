@@ -21,12 +21,18 @@ export function Header() {
     setIsMenuOpen(false);
   }, [location.pathname]);
 
+  // Handle link click - scroll to top and close mobile menu
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container custom-container mx-auto px-4">
         <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" onClick={handleLinkClick} className="flex items-center gap-2">
             <img 
               src={logo} 
               alt="Fast Track Tire & Lube" 
@@ -40,6 +46,7 @@ export function Header() {
               <Link
                 key={link.path}
                 to={link.path}
+                onClick={handleLinkClick}
                 className={`rounded-md px-4 py-2 text-sm font-medium transition-colors hover:nav-link-hover ${
                   location.pathname === link.path
                     ? "nav-link-active text-white"
@@ -80,7 +87,7 @@ export function Header() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleLinkClick}
                   className={`rounded-md px-4 py-3 text-sm font-medium transition-colors hover:nav-link-hover ${
                     location.pathname === link.path
                       ? "nav-link-active text-white"
