@@ -117,7 +117,7 @@ export default function Index() {
 
             <div className="animate-fade-in flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="gap-2 bg-primary px-8 text-lg hover:bg-primary/90 text-white border-white/20">
-                <a href="tel:+16406400097">
+                <a href="tel:+16476400097">
                   <Phone className="h-5 w-5" />
                   Call Now
                 </a>
@@ -128,7 +128,7 @@ export default function Index() {
                 variant="outline"
                 className="gap-2 border-white/50 px-8 text-lg text-white hover:bg-white/10 backdrop-blur-sm"
               >
-                <a href="https://wa.me/+16406400097" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+16476400097" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="h-5 w-5" />
                   WhatsApp Us
                 </a>

@@ -13,8 +13,10 @@ const services = [
   "New & Used Tires",
   "Tire Installation & Balancing",
   "Seasonal Tire Change",
-  "Oil Change & Lube",
   "Tire Rotation",
+  "Rims & Wheels Services",
+  "Brake Services",
+  "Flat Tire Repair"
 ];
 
 export function Footer() {

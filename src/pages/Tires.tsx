@@ -116,7 +116,7 @@ function WinterAlertSection() {
             </p>
           </div>
           <a
-            href="tel:+16406400097"
+            href="tel:+16476400097"
             className="shrink-0 rounded-lg bg-primary-foreground px-6 py-3 font-bold text-primary transition-colors hover:bg-primary-foreground/90"
           >
             Book Your Swap

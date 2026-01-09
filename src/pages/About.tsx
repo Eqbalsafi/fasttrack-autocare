@@ -127,7 +127,7 @@ export default function About() {
             We're always looking for talented technicians who share our passion for quality service. Contact us to learn about career opportunities.
           </p>
           <a
-            href="tel:+16406400097"
+            href="tel:+16476400097"
             className="inline-block rounded-lg bg-primary-foreground px-8 py-3 font-medium text-primary transition-colors hover:bg-primary-foreground/90"
           >
             Contact Us
